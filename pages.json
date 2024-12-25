@@ -1,0 +1,34 @@
+{
+  "pages": [
+    {
+      "title": "History",
+      "url": null,
+      "children": [
+        {
+          "title": "History of dendritic research",
+          "url": "pages/0_History/0_History_of_dendritic_research.html"
+        }
+      ]
+    },
+    {
+      "title": "Dendrites",
+      "url": null,
+      "children": [
+        {
+          "title": "Dendrite",
+          "url": "pages/1_Dendrites/0_Dendrite.html"
+        }
+      ]
+    },
+    {
+      "title": "Equations",
+      "url": null,
+      "children": [
+        {
+          "title": "Nernst equation",
+          "url": "pages/2_Equations/0_Nernst_equation.html"
+        }
+      ]
+    }
+  ]
+}

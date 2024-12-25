@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "monospace" !important;
   background-color: #222225;
@@ -9,6 +10,7 @@ body .navbar {
   justify-content: space-around;
   padding: 2rem;
   padding-top: 3rem;
+  margin-bottom: 5rem;
 }
 body .navbar .home {
   display: flex;
@@ -27,6 +29,9 @@ body .navbar .home a {
   font-size: 1.5rem;
   font-weight: bold;
 }
+body .navbar .home a:hover {
+  color: white;
+}
 body .navbar .search {
   display: flex;
   justify-content: space-between;
@@ -39,12 +44,15 @@ body .navbar .search form {
   width: 100%;
 }
 body .navbar .search form label {
-  color: white;
+  color: #9da5b3;
   font-size: 1.5rem;
   font-weight: bold;
   margin-right: 1rem;
   text-wrap: nowrap;
   padding: 0.5rem;
+}
+body .navbar .search form label:hover {
+  color: white;
 }
 body .navbar .search form input {
   width: 100%;
@@ -71,23 +79,178 @@ body .navbar .nav-links a {
   font-size: 1.5rem;
   font-weight: bold;
 }
+body .navbar .nav-links a:hover {
+  color: white;
+}
 body .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; /* Add this line to center horizontally */
-  height: 100%; /* Add this line to ensure the content takes the full viewport height */
 }
 body .content #logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  margin-top: 15rem;
+  margin-top: 10rem;
 }
 body .content #moto {
   color: rgb(255, 255, 255);
   font-size: 1.2rem;
   margin: 5rem;
   text-align: center;
+}
+body .page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left; /* Add this line to center horizontally */
+  color: rgb(224, 227, 233);
+  width: 42%;
+  margin-left: 25%;
+}
+body .page .toc ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 3rem;
+}
+body .page .toc ul li {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+body .page .toc ul li a {
+  color: #9da5b3;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+body .page .toc ul li a:hover {
+  color: white;
+}
+body .page h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+body .page .meta {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin: 0;
+  font-size: 1 rem;
+  color: gray;
+}
+body .page .summary {
+  font-size: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  text-align: justify;
+  line-height: 1.5rem;
+}
+body .page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: white;
+  font-size: 1rem;
+}
+body .page table th {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+}
+body .page table th,
+body .page table td {
+  padding: 0.5rem;
+  text-align: left;
+}
+body .page table.relations td:nth-child(1) {
+  color: dodgerblue;
+}
+body .page .equation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: white;
+  font-size: 2rem;
+}
+body .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 5rem;
+  font-size: 1rem;
+  margin-top: 15rem;
+}
+
+a {
+  color: darkgoldenrod;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+a:hover {
+  color: white;
+}
+
+.katex {
+  font-size: 1.5rem;
+  color: cyan;
+}
+
+.hljs-copy {
+  position: relative;
+  top: 38px;
+  left: 95%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.hljs-copy img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 500px) {
+  body .navbar .home {
+    width: 30%;
+    margin-left: 0;
+  }
+  body .navbar .search {
+    display: none;
+  }
+  body .navbar .nav-links {
+    gap: 1rem;
+  }
+  body .content #logo {
+    width: 80%;
+    margin-top: 5rem;
+  }
+  body .content #moto {
+    margin: 2rem;
+  }
+  body .page {
+    width: 80% !important;
+    margin-left: 5%;
+  }
+}
+::-webkit-scrollbar {
+  height: 8px; /* height of horizontal scrollbar ← You're missing this */
+  width: 8px; /* width of vertical scrollbar */
+  border: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4c4d52; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
 }/*# sourceMappingURL=main.css.map */

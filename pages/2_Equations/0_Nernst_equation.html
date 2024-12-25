@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DendroPedia</title>
+        <link rel="stylesheet" href="../../static/css/main.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/nord.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css"
+            crossorigin="anonymous"
+        />
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="home">
+                <a href="../../index.html">Home</a>
+            </div>
+            <div class="search">
+                <form action="search.php" method="get">
+                    <label for="search">> Search</label>
+                    <input
+                        type="text"
+                        id="search"
+                        name="search"
+                        placeholder=""
+                    />
+                </form>
+            </div>
+            <div class="nav-links">
+                <a href="../../about.html">About</a>
+                <a href="../../browse.html">Browse</a>
+                <a href="../../contribute.html">Contribute</a>
+            </div>
+        </div>
+        <div class="page">
+            <h1>Nernst Equation</h1>
+            <div class="meta">
+                <p>Author: Roman Makarov</p>
+                <p>Date: 2024-12-25</p>
+            </div>
+
+            <div class="summary">
+                The Nernst equation is used to calculate the equilibrium
+                potential of an ion across a membrane.
+            </div>
+
+            <div class="equation">
+                $E = \frac{RT}{zF} \ln \left(
+                \frac{[C]_{\text{out}}}{[C]_{\text{in}}} \right)$
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Term</th>
+                        <th>Description</th>
+                        <th>Value</th>
+                        <th>Unit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>$E$</td>
+                        <td>Equilibrium potential</td>
+                        <td></td>
+                        <td>V</td>
+                    </tr>
+                    <tr>
+                        <td>$R$</td>
+                        <td>Gas constant</td>
+                        <td>8.314</td>
+                        <td>J/(mol K)</td>
+                    </tr>
+                    <tr>
+                        <td>$T$</td>
+                        <td>Absolute temperature</td>
+                        <td></td>
+                        <td>K</td>
+                    </tr>
+                    <tr>
+                        <td>$z$</td>
+                        <td>Ion charge</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>$F$</td>
+                        <td>Faraday constant</td>
+                        <td>96,485</td>
+                        <td>C/mol</td>
+                    </tr>
+                    <tr>
+                        <td>$[C]_{\text{out}}$</td>
+                        <td>Extracellular concentration</td>
+                        <td></td>
+                        <td>mol/L</td>
+                    </tr>
+                    <tr>
+                        <td>$[C]_{\text{in}}$</td>
+                        <td>Intracellular concentration</td>
+                        <td></td>
+                        <td>mol/L</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="python">
+                <pre><code class="language-python">def nernst_equation(T, z, C_out, C_in):
+    """
+    Calculate the equilibrium potential using the Nernst equation.
+
+    Parameters
+    ----------
+    T : float
+        Absolute temperature in Kelvin.
+    z : int
+        Ion charge.
+    C_out : float
+        Extracellular concentration in mol/L.
+    C_in : float
+        Intracellular concentration in mol/L.
+
+    Returns
+    -------
+    float
+        Equilibrium potential in volts.
+    """                    
+    R = 8.314 # J/(mol K)
+    F = 96485 # C/mol
+
+    return R * T / (z * F) * np.log(C_out / C_in)
+</code></pre>
+            </div>
+        </div>
+
+        <div class="footer"></div>
+    </body>
+
+    <script>
+        // Render LaTeX math expressions
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '$', right: '$', display: false },
+                    { left: '\\[', right: '\\]', display: true },
+                ],
+            });
+        });
+
+        // Syntax highlighting in code blocks
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+            });
+        });
+
+        // Copy button for code blocks
+        document.addEventListener('DOMContentLoaded', () => {
+            const snippets = document.getElementsByTagName('pre');
+            const numberOfSnippets = snippets.length;
+            for (let i = 0; i < numberOfSnippets; i++) {
+                snippets[i].innerHTML =
+                    '<button class="hljs-copy"><img src="../../static/images/copy.png" alt="Copy" /></button>' +
+                    snippets[i].innerHTML;
+
+                snippets[i]
+                    .getElementsByClassName('hljs-copy')[0]
+                    .addEventListener('click', function () {
+                        const code = this.nextElementSibling.innerText;
+                        navigator.clipboard.writeText(code);
+                        const button = this;
+                        button.innerHTML =
+                            '<img src="../../static/images/copied.png" alt="Copied" />';
+                        setTimeout(() => {
+                            button.innerHTML =
+                                '<img src="../../static/images/copy.png" alt="Copy" />';
+                        }, 800);
+                    });
+            }
+        });
+    </script>
+</html>

@@ -23,11 +23,58 @@
             <a href="contribute.html">Contribute</a>
         </div>
     </div>
-    <div class="content">
-
+    <div class="page">
+        <div class="toc"></div>
     </div>
+    
+
+    
 
     <div class="footer"></div>
 
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('pages.json')
+            .then(response => response.json())
+            .then(data => {
+                const pageDiv = document.querySelector('.toc');
+
+                // Recursive function to build the nested list
+                function buildList(pages) {
+                    const ul = document.createElement('ul');
+
+                    pages.forEach(page => {
+                        const li = document.createElement('li');
+                        if (page.url) {
+                            // Add link for files
+                            const a = document.createElement('a');
+                            a.href = page.url;
+                            a.textContent = page.title;
+                            li.appendChild(a);
+                        } else {
+                            // Add text for directories
+                            li.textContent = page.title;
+                        }
+
+                        // If the page has children, add a nested list
+                        if (page.children && page.children.length > 0) {
+                            li.appendChild(buildList(page.children));
+                        }
+
+                        ul.appendChild(li);
+                    });
+
+                    return ul;
+                }
+
+                // Build and append the TOC
+                const toc = buildList(data.pages);
+                pageDiv.appendChild(toc);
+            })
+            .catch(error => console.error('Error fetching pages:', error));
+    });
+</script>
+
 </html>
