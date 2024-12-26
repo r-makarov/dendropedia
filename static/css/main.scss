@@ -2,14 +2,14 @@ body {
     font-family: 'monospace' !important;
     background-color: #222225ff;
     margin: 0;
+    padding: 0;
+    
 
     .navbar {
-        background-color: none;
         display: flex;
         justify-content: space-around;
         padding: 2rem;
         padding-top: 3rem;
-        margin-bottom: 5rem;
 
         .home {
             display: flex;
@@ -118,7 +118,8 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: left; /* Add this line to center horizontally */
-        
+        padding-top: 5rem;
+
         color: rgb(224, 227, 233);
         width: 42%;
         margin-left: 25%;
@@ -167,8 +168,11 @@ body {
             font-size: 1rem;
             margin-top: 1rem;
             width: 100%;
-            text-align: justify;
             line-height: 1.5rem;
+            text-align: justify;
+            overflow-wrap: break-word; 
+            word-break: break-word;    
+            hyphens: auto;             
         }
 
         .disclaimer {
@@ -220,7 +224,6 @@ body {
             }
         }
 
-
         .equation {
             display: flex;
             justify-content: center;
@@ -237,9 +240,7 @@ body {
         justify-content: center;
         align-items: center;
         color: white;
-        height: 5rem;
         font-size: 1rem;
-        margin-top: 15rem;
     }
 }
 
@@ -255,7 +256,7 @@ a {
 
 .katex {
     font-size: 1.5rem;
-    color: cyan
+    color: cyan;
 }
 
 .hljs-copy {
@@ -274,42 +275,63 @@ a {
     }
 }
 
-
-@media only screen and (max-width: 500px) {
-
+@media only screen and (max-width: 800px) {
     body {
         .navbar {
 
             .home {
-                width: 30%;
+                width: 100%;
                 margin-left: 0;
+                justify-content: center;
+                a {
+                    font-size: 1rem;
+                }
             }
-
             .search {
                 display: none;
             }
-
             .nav-links {
+                width: 100%;
+                justify-content: center;
                 gap: 1rem;
+                a {
+                    font-size: 1rem;
+                }
             }
+            
         }
 
         .content {
             #logo {
-                width: 80%;
+                width: 90%;
                 margin-top: 5rem;
             }
-
             #moto {
+                font-size: 1rem;
                 margin: 2rem;
+                margin-bottom: 15rem;
             }
         }
-
         .page {
-            width: 80% !important;
+            width: 90%;
             margin-left: 5%;
         }
     }
+
+.hljs-copy {
+    top: 38px;
+    left: 90%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    img {
+        width: 20px;
+        height: 20px;
+        filter: invert(1);
+        opacity: 0.5;
+    }
+}
 }
 
 ::-webkit-scrollbar {

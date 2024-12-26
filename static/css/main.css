@@ -3,14 +3,13 @@ body {
   font-family: "monospace" !important;
   background-color: #222225;
   margin: 0;
+  padding: 0;
 }
 body .navbar {
-  background-color: none;
   display: flex;
   justify-content: space-around;
   padding: 2rem;
   padding-top: 3rem;
-  margin-bottom: 5rem;
 }
 body .navbar .home {
   display: flex;
@@ -106,6 +105,7 @@ body .page {
   flex-direction: column;
   justify-content: center;
   align-items: left; /* Add this line to center horizontally */
+  padding-top: 5rem;
   color: rgb(224, 227, 233);
   width: 42%;
   margin-left: 25%;
@@ -148,8 +148,12 @@ body .page .summary {
   font-size: 1rem;
   margin-top: 1rem;
   width: 100%;
-  text-align: justify;
   line-height: 1.5rem;
+  text-align: justify;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+          hyphens: auto;
 }
 body .page .disclaimer {
   font-size: 1rem;
@@ -203,9 +207,7 @@ body .footer {
   justify-content: center;
   align-items: center;
   color: white;
-  height: 5rem;
   font-size: 1rem;
-  margin-top: 15rem;
 }
 
 a {
@@ -238,27 +240,51 @@ a:hover {
   opacity: 0.5;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   body .navbar .home {
-    width: 30%;
+    width: 100%;
     margin-left: 0;
+    justify-content: center;
+  }
+  body .navbar .home a {
+    font-size: 1rem;
   }
   body .navbar .search {
     display: none;
   }
   body .navbar .nav-links {
+    width: 100%;
+    justify-content: center;
     gap: 1rem;
   }
+  body .navbar .nav-links a {
+    font-size: 1rem;
+  }
   body .content #logo {
-    width: 80%;
+    width: 90%;
     margin-top: 5rem;
   }
   body .content #moto {
+    font-size: 1rem;
     margin: 2rem;
+    margin-bottom: 15rem;
   }
   body .page {
-    width: 80% !important;
+    width: 90%;
     margin-left: 5%;
+  }
+  .hljs-copy {
+    top: 38px;
+    left: 90%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .hljs-copy img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+    opacity: 0.5;
   }
 }
 ::-webkit-scrollbar {
