@@ -171,7 +171,14 @@ body {
             line-height: 1.5rem;
         }
 
-        
+        .disclaimer {
+            font-size: 1rem;
+            margin-top: 1rem;
+            width: 100%;
+            text-align: justify;
+            line-height: 1.5rem;
+            color: darkgoldenrod;
+        }
 
         table {
             width: 100%;
@@ -196,6 +203,19 @@ body {
             &.relations {
                 td:nth-child(1) {
                     color: dodgerblue;
+                }
+                td:nth-child(3) {
+                    color: lawngreen;
+                }
+            }
+            &.scale {
+                td:nth-child(1) {
+                    color: lawngreen;
+                }
+            }
+            &.equation-terms {
+                td:nth-child(3) {
+                    color: lawngreen;
                 }
             }
         }

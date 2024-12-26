@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DendroPedia</title>
     <link rel="stylesheet" href="static/css/main.css">
+    <link rel="icon" type="image/png" href="static/images/favicon.png" />
+    <script src="search.js"></script>
 </head>
 <body>
     <div class="navbar">
@@ -12,9 +14,9 @@
             <a href="index.html">Home</a>
         </div>
         <div class="search">
-            <form action="search.js" method="get">
+            <form id="searchForm">
                 <label for="search">> Search</label>
-                <input type="text" id="search" name="search" placeholder="">
+                <input type="text" id="search" name="search" placeholder="Type here...">
             </form>
         </div>
         <div class="nav-links">

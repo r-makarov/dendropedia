@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DendroPedia</title>
     <link rel="stylesheet" href="../../static/css/main.css">
+    <link rel="icon" type="image/png" href="../../static/images/favicon.png" />
+    <script src="search.js"></script>
 </head>
-<body>
+<body style="background-color: #222225ff;">
     <div class="navbar">
         <div class="home">
             <a href="../../index.html">Home</a>
         </div>
         <div class="search">
-            <form action="search.php" method="get">
+            <form id="searchForm">
                 <label for="search">> Search</label>
-                <input type="text" id="search" name="search" placeholder="">
+                <input type="text" id="search" name="search" placeholder="Type here...">
             </form>
         </div>
         <div class="nav-links">
@@ -27,7 +29,9 @@
         <h1>History of dendritic research</h1>
         <div class="meta">
             <p>Author: Roman Makarov</p>
-            <p>Date: 2024-12-25</p>
+            <p>Date: <script>
+                document.write(new Date(document.lastModified).toLocaleDateString('en-GB'));
+            </script></p></script>
         </div>
          
         <div class="summary">
@@ -39,7 +43,7 @@
             of dendrites in neural computation.
         </div>
 
-        <table>
+        <table class="scale">
             <thead>
                 <tr>
                     <th>Year</th>

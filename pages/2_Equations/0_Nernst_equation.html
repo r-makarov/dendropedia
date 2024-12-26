@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>DendroPedia</title>
         <link rel="stylesheet" href="../../static/css/main.css" />
+        <link rel="icon" type="image/png" href="../../static/images/favicon.png" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/nord.css"
@@ -25,21 +26,17 @@
             src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js"
             crossorigin="anonymous"
         ></script>
+        <script src="search.js"></script>
     </head>
-    <body>
+    <body style="background-color: #222225ff;">
         <div class="navbar">
             <div class="home">
                 <a href="../../index.html">Home</a>
             </div>
             <div class="search">
-                <form action="search.php" method="get">
+                <form id="searchForm">
                     <label for="search">> Search</label>
-                    <input
-                        type="text"
-                        id="search"
-                        name="search"
-                        placeholder=""
-                    />
+                    <input type="text" id="search" name="search" placeholder="Type here...">
                 </form>
             </div>
             <div class="nav-links">
@@ -52,7 +49,9 @@
             <h1>Nernst Equation</h1>
             <div class="meta">
                 <p>Author: Roman Makarov</p>
-                <p>Date: 2024-12-25</p>
+                <p>Date: <script>
+                    document.write(new Date(document.lastModified).toLocaleDateString('en-GB'));
+                </script></p></script>
             </div>
 
             <div class="summary">
@@ -65,7 +64,7 @@
                 \frac{[C]_{\text{out}}}{[C]_{\text{in}}} \right)$
             </div>
 
-            <table>
+            <table class="equation-terms">
                 <thead>
                     <tr>
                         <th>Term</th>

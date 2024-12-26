@@ -151,6 +151,14 @@ body .page .summary {
   text-align: justify;
   line-height: 1.5rem;
 }
+body .page .disclaimer {
+  font-size: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  text-align: justify;
+  line-height: 1.5rem;
+  color: darkgoldenrod;
+}
 body .page table {
   width: 100%;
   border-collapse: collapse;
@@ -171,6 +179,15 @@ body .page table td {
 }
 body .page table.relations td:nth-child(1) {
   color: dodgerblue;
+}
+body .page table.relations td:nth-child(3) {
+  color: lawngreen;
+}
+body .page table.scale td:nth-child(1) {
+  color: lawngreen;
+}
+body .page table.equation-terms td:nth-child(3) {
+  color: lawngreen;
 }
 body .page .equation {
   display: flex;
