@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: "monospace" !important;
   background-color: #222225;
@@ -104,11 +108,12 @@ body .page {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left; /* Add this line to center horizontally */
+  align-items: left;
   padding-top: 5rem;
   color: rgb(224, 227, 233);
   width: 42%;
   margin-left: 25%;
+  padding-bottom: 15%;
 }
 body .page .toc ul {
   list-style-type: none;
@@ -203,7 +208,7 @@ body .page .equation {
   font-size: 2rem;
 }
 body .footer {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   color: white;
