@@ -1,93 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DendroPedia</title>
-    <link rel="stylesheet" href="../../static/css/main.css">
-    <link rel="icon" type="image/png" href="../../static/images/favicon.png" />
-    <script src="search.js"></script>
-</head>
-<body style="background-color: #222225ff;">
-    <div class="navbar">
-        <div class="home">
-            <a href="../../index.html">Home</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DendroPedia</title>
+        <link rel="stylesheet" href="../../static/css/main.css" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="../../static/images/favicon.png"
+        />
+        <script src="search.js"></script>
+    </head>
+    <body style="background-color: #222225ff">
+        <div class="navbar">
+            <div class="home">
+                <a href="../../index.html">Home</a>
+            </div>
+            <div class="search">
+                <form id="searchForm">
+                    <label for="search">> Search</label>
+                    <input
+                        type="text"
+                        id="search"
+                        name="search"
+                        placeholder=""
+                    />
+                </form>
+            </div>
+            <div class="nav-links">
+                <a href="../../about.html">About</a>
+                <a href="../../browse.html">Browse</a>
+                <a href="../../contribute.html">Contribute</a>
+            </div>
         </div>
-        <div class="search">
-            <form id="searchForm">
-                <label for="search">> Search</label>
-                <input type="text" id="search" name="search" placeholder="">
-            </form>
-        </div>
-        <div class="nav-links">
-            <a href="../../about.html">About</a>
-            <a href="../../browse.html">Browse</a>
-            <a href="../../contribute.html">Contribute</a>
-        </div>
-    </div>
-    <div class="page">
-        <h1>History of dendritic research</h1>
-        <div class="meta">
-            <p>Author: Roman Makarov</p>
-            <p>Date: <script>
-                document.write(new Date(document.lastModified).toLocaleDateString('en-GB'));
-            </script></p></script>
-        </div>
-         
-        <div class="summary">
-            Dendritic research has significantly advanced our understanding of neuronal function. 
-            Early studies by Hodgkin and Huxley laid the groundwork with their model of action potentials. 
-            Subsequent research by Rall and others explored voltage attenuation and dendritic spikes, 
-            revealing the complex electrical properties of dendrites. These discoveries have been crucial 
-            in understanding how neurons process and integrate information, highlighting the importance 
-            of dendrites in neural computation.
+        <div class="page">
+            <h1>History of dendritic research</h1>
+            <div class="meta">
+                <p>Author: Roman Makarov</p>
+                <p>
+                    Date:
+                    <script>
+                        document.write(
+                            new Date(document.lastModified).toLocaleDateString(
+                                'en-GB'
+                            )
+                        );
+                    </script>
+                </p>
+            </div>
+
+            <div class="block summary">
+                Dendritic research has significantly advanced our understanding
+                of neuronal function. Early studies by Hodgkin and Huxley laid
+                the groundwork with their model of action potentials. Subsequent
+                research by Rall and others explored voltage attenuation and
+                dendritic spikes, revealing the complex electrical properties of
+                dendrites. These discoveries have been crucial in understanding
+                how neurons process and integrate information, highlighting the
+                importance of dendrites in neural computation.
+            </div>
+            <div class="block">
+                <table class="scale">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Researchers</th>
+                            <th>Event</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1952</td>
+                            <td>Hodgkin & Huxley</td>
+                            <td>The HH model of AP</td>
+                        </tr>
+                        <tr>
+                            <td>1959</td>
+                            <td>Rall</td>
+                            <td>
+                                Voltage attenuation in branching dendritic trees
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1964</td>
+                            <td>Ecles</td>
+                            <td>
+                                Dendritic spikes in distal dendrites of Purkinje
+                                cells
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1968</td>
+                            <td>Llinas</td>
+                            <td>
+                                Evidence for dendritic initiation of dendritic
+                                spikes
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1968</td>
+                            <td>Rall & Shepherd</td>
+                            <td>
+                                First theoretical exploration of active
+                                dendrites
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1971</td>
+                            <td>Llinas and Nicholson</td>
+                            <td>
+                                Intracellular recording from dendrites in vivo
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
-        <table class="scale">
-            <thead>
-                <tr>
-                    <th>Year</th>
-                    <th>Researchers</th>
-                    <th>Event</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1952</td>
-                    <td>Hodgkin & Huxley</td>
-                    <td>The HH model of AP</td>
-                </tr>
-                <tr>
-                    <td>1959</td>
-                    <td>Rall</td>
-                    <td>Voltage attenuation in branching dendritic trees</td>
-                </tr>
-                <tr>
-                    <td>1964</td>
-                    <td>Ecles</td>
-                    <td>Dendritic spikes in distal dendrites of Purkinje cells</td>
-                </tr>
-                <tr>
-                    <td>1968</td>
-                    <td>Llinas</td>
-                    <td>Evidence for dendritic initiation of dendritic spikes</td>
-                </tr>
-                <tr>
-                    <td>1968</td>
-                    <td>Rall & Shepherd</td>
-                    <td>First theoretical exploration of active dendrites</td>
-                </tr>
-                <tr>
-                    <td>1971</td>
-                    <td>Llinas and Nicholson</td>
-                    <td>Intracellular recording from dendrites in vivo</td>
-                </tr>
-            </tbody>
-        </table>
-        
-    </div>
-
-    <div class="footer"></div>
-
-</body>
+        <div class="footer"></div>
+    </body>
 </html>
