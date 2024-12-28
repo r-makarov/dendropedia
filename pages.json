@@ -11,16 +11,46 @@
       ]
     },
     {
+      "title": "Neurons",
+      "url": null,
+      "children": [
+        {
+          "title": "Cell",
+          "url": "pages/1_Neurons/0_Cell.html"
+        },
+        {
+          "title": "Neuron",
+          "url": "pages/1_Neurons/1_Neuron.html"
+        },
+        {
+          "title": "Excitatory neuron",
+          "url": "pages/1_Neurons/2_Excitatory_neuron.html"
+        },
+        {
+          "title": "Pyramidal neuron",
+          "url": "pages/1_Neurons/3_Pyramidal_neuron.html"
+        }
+      ]
+    },
+    {
       "title": "Dendrites",
       "url": null,
       "children": [
         {
           "title": "Dendrite",
-          "url": "pages/1_Dendrites/0_Dendrite.html"
+          "url": "pages/2_Dendrites/0_Dendrite.html"
         },
         {
           "title": "Apical dendrite",
-          "url": "pages/1_Dendrites/1_Apical_dendrite.html"
+          "url": "pages/2_Dendrites/1_Apical_dendrite.html"
+        },
+        {
+          "title": "Basal dendrite",
+          "url": "pages/2_Dendrites/2_Basal_dendrite.html"
+        },
+        {
+          "title": "Oblique dendrite",
+          "url": "pages/2_Dendrites/3_Oblique_dendrite.html"
         }
       ]
     },
@@ -30,7 +60,7 @@
       "children": [
         {
           "title": "Nernst equation",
-          "url": "pages/2_Equations/0_Nernst_equation.html"
+          "url": "pages/3_Equations/0_Nernst_equation.html"
         }
       ]
     }

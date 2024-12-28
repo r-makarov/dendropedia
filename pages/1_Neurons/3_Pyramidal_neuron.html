@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DendroPedia</title>
+        <link rel="stylesheet" href="../../static/css/main.css" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="../../static/images/favicon.png"
+        />
+        <script src="search.js"></script>
+    </head>
+    <body style="background-color: #222225ff">
+        <div class="navbar">
+            <div class="home">
+                <a href="../../index.html">Home</a>
+            </div>
+            <div class="search">
+                <form id="searchForm">
+                    <label for="search">> Search</label>
+                    <input
+                        type="text"
+                        id="search"
+                        name="search"
+                        placeholder=""
+                    />
+                </form>
+            </div>
+            <div class="nav-links">
+                <a href="../../about.html">About</a>
+                <a href="../../browse.html">Browse</a>
+                <a href="../../contribute.html">Contribute</a>
+            </div>
+        </div>
+        <div class="page">
+            <h1>Pyramidal neuron</h1>
+            <div class="meta">
+                <p>Author: Roman Makarov</p>
+                <p>
+                    Date:
+                    <script>
+                        document.write(
+                            new Date(document.lastModified).toLocaleDateString(
+                                'en-GB'
+                            )
+                        );
+                    </script>
+                </p>
+            </div>
+
+            <div class="block summary">
+                A pyramidal neuron is a type of excitatory neuron found in
+                areas of the brain, including the cerebral cortex and the
+                hippocampus.
+            </div>
+
+            <div class="block">
+                <table class="relations">
+                    <thead>
+                        <tr>
+                            <th>Relation</th>
+                            <th>Concept</th>
+                            <th>Value range</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>is part of</td>
+                            <td>Nervous system</td>
+                        </tr>
+                        <tr>
+                            <td>is subptype of</td>
+                            <td>
+                                <a href="2_Excitatory_neuron.html"> Excitatory neuron </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>has subtypes by region</td>
+                            <td>Cortical pyramidal neuron |
+                            Hippocampal pyramidal neuron</td>
+                        </tr>
+                        <tr>
+                            <td>has parts</td>
+                            <td>
+                                Soma
+                                |
+                                Axon
+                                |
+                                <a href="../2_Dendrites/1_Apical_dendrite.html"> Apical dendrite </a>
+                                |
+                                <a href="../2_Dendrites/2_Basal_dendrite.html"> Basal dendrite </a>
+                                |
+                                <a href="../2_Dendrites/3_Oblique_dendrite.html"> Oblique dendrite </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="footer"></div>
+    </body>
+</html>
